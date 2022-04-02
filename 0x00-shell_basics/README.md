@@ -30,6 +30,7 @@ __Shell Basics__
    
    _ls -a -l_
 
+
 5. Display current directory contents: Long format, with user and group IDs displayed numerically, and hidden files (starting with .)	
 	
    _#!/bin/bash_
