@@ -4,7 +4,8 @@
 # web-01 --> 47032-web-01 44.197.201.22
 # web-02 --> 47032-web-02 54.237.65.71
 
-domain_information () {
+display_info ()
+{
     domain="$1"
     subdomain="$2"
     dig "$subdomain.$domain" | awk '/ANSWER SECTION:/{getline; printf "The subdomain %s is a %s record and points to %s\n", var, $4, $5}' var="$subdomain"
@@ -14,6 +15,6 @@ for subdomain in "www" "lb-01" "web-01" "web-02"
 do
     if [ -z "$2" ] || [ "$2" == "$subdomain" ] ;
     then
-    domain_information "$1" "$subdomain"
+	display_info "$1" "$subdomain"
     fi
 done
