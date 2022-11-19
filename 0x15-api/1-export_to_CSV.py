@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''Returns information about an employee's TODO list progress 
+'''Returns information about an employee's TODO list progress
     and save it to CSV file
 '''
 from csv import writer, QUOTE_ALL
